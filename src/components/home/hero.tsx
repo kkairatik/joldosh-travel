@@ -1,19 +1,19 @@
-import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 import { Container } from "@/components/container";
+import { HeroSearch } from "@/components/home/hero-search";
 import { WhatsAppIcon } from "@/components/icons";
-import { Button } from "@/components/ui/button";
-import { Link } from "@/i18n/navigation";
 import { whatsappHref } from "@/lib/contacts";
 
 // Фото: Unsplash (бесплатная лицензия)
 const HERO_IMAGE =
-  "https://images.unsplash.com/photo-1620065487644-1080510335f5";
+  "https://images.unsplash.com/photo-1620065487644-1080510335f5?w=2400&q=80&auto=format&fit=crop";
 
-export function Hero() {
-  const t = useTranslations("Home.hero");
+type Props = { destinations: { slug: string; name: string }[] };
+
+export function Hero({ destinations }: Props) {
+  const t = useTranslations("Home");
   const tWhatsApp = useTranslations("WhatsApp");
 
   return (
@@ -41,36 +41,33 @@ export function Hero() {
       <Container className="flex min-h-[620px] flex-col justify-center pt-28 pb-36 sm:min-h-[680px] lg:min-h-[760px] lg:pt-32">
         <p className="inline-flex w-fit items-center gap-2 rounded-full bg-white/15 px-3 py-1.5 text-sm font-semibold backdrop-blur-sm">
           <span aria-hidden="true" className="size-2 rounded-full bg-primary" />
-          {t("eyebrow")}
+          {t("hero.eyebrow")}
         </p>
         <h1 className="mt-5 max-w-3xl text-4xl leading-[1.08] font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-          {t.rich("title", {
+          {t.rich("hero.title", {
             nowrap: (chunks) => (
               <span className="whitespace-nowrap">{chunks}</span>
             ),
           })}
         </h1>
         <p className="mt-5 max-w-xl text-lg text-white/85 sm:text-xl">
-          {t("subtitle")}
+          {t("hero.subtitle")}
         </p>
-        <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-          <Button asChild size="xl">
-            <Link href="/tours">
-              {t("primaryCta")}
-              <ArrowRight />
-            </Link>
-          </Button>
-          <Button asChild size="xl" variant="glass">
-            <a
-              href={whatsappHref(tWhatsApp("greeting"))}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <WhatsAppIcon />
-              {t("secondaryCta")}
-            </a>
-          </Button>
-        </div>
+
+        <HeroSearch destinations={destinations} />
+
+        <p className="mt-5 text-[15px] text-white/85">
+          {t("search.help")}{" "}
+          <a
+            href={whatsappHref(tWhatsApp("greeting"))}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-white underline decoration-white/40 underline-offset-4 hover:decoration-white"
+          >
+            <WhatsAppIcon className="mr-1.5 inline-block align-[-3px]" />
+            {t("search.helpLink")}
+          </a>
+        </p>
       </Container>
     </section>
   );
