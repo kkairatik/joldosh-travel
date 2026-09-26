@@ -1,7 +1,7 @@
-import { useFormatter, useLocale, useTranslations } from "next-intl";
+import { useFormatter, useTranslations } from "next-intl";
 
-import { Button } from "@/components/ui/button";
-import { whatsappHref } from "@/lib/contacts";
+import { BookingDialog } from "@/components/booking/booking-dialog";
+import { useBookingTour } from "@/components/tours/use-booking-tour";
 import type { Tour } from "@/lib/tours/schema";
 
 // Панель внизу экрана на телефоне: цена и кнопка всегда под рукой.
@@ -9,7 +9,7 @@ import type { Tour } from "@/lib/tours/schema";
 export function MobileBookingBar({ tour }: { tour: Tour }) {
   const t = useTranslations("Tour");
   const format = useFormatter();
-  const locale = useLocale();
+  const bookingTour = useBookingTour(tour);
 
   return (
     <div
@@ -25,17 +25,7 @@ export function MobileBookingBar({ tour }: { tour: Tour }) {
             {t("perPerson")} · {t("nights", { count: tour.nights })}
           </p>
         </div>
-        <Button asChild size="xl" className="px-8">
-          <a
-            href={whatsappHref(
-              t("bookingMessage", { title: tour.title[locale] }),
-            )}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {t("book")}
-          </a>
-        </Button>
+        <BookingDialog tour={bookingTour} triggerClassName="px-8" />
       </div>
     </div>
   );

@@ -11,5 +11,6 @@ export const formats = {
   },
   dateTime: {
     departure: { day: "numeric", month: "long" },
+    departureFull: { day: "numeric", month: "long", year: "numeric" },
   },
 } satisfies Formats;
