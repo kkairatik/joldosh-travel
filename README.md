@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Joldosh — сайт турагентства
 
-## Getting Started
+Двуязычный (RU/EN) сайт вымышленного турагентства из Бишкека: каталог туров, страница тура, заявка на бронирование и админка. Демо-проект для портфолио.
 
-First, run the development server:
+> _Joldosh_ по-кыргызски — «попутчик».
+
+## Стек
+
+- **Next.js 16** (App Router, Server Components, Turbopack), **React 19**, **TypeScript**
+- **Tailwind CSS 4** + **shadcn/ui** (Radix UI)
+- **next-intl** — языки через сегмент `[locale]` и `next/root-params`
+- ESLint, Prettier, GitHub Actions (lint, типы, формат, сборка)
+
+## Запуск
+
+Нужен Node.js 20.9+.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+cp .env.example .env.local   # при желании поменяйте контакты
+npm run dev                  # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+| Команда             | Что делает                             |
+| ------------------- | -------------------------------------- |
+| `npm run dev`       | Сервер разработки                      |
+| `npm run build`     | Продакшен-сборка                       |
+| `npm run lint`      | ESLint                                 |
+| `npm run typecheck` | Генерация типов маршрутов + `tsc`      |
+| `npm run format`    | Prettier (сортирует и Tailwind-классы) |
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Структура
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+messages/            тексты интерфейса: ru.json, en.json
+src/
+  app/[locale]/      страницы; корневой layout внутри [locale]
+  components/        layout/ (шапка, футер), home/ (блоки главной), ui/ (shadcn)
+  config/site.ts     контакты и меню
+  i18n/              настройки next-intl: языки, навигация, загрузка текстов
+  proxy.ts           определяет язык и перенаправляет / → /ru или /en
+```
 
-## Learn More
+## Решения
 
-To learn more about Next.js, take a look at the following resources:
+- **Язык — часть адреса** (`/ru/...`, `/en/...`): у каждой версии своя ссылка, её индексируют поисковики. При первом заходе на `/` язык выбирается по настройкам браузера.
+- **Язык читается через `next/root-params`** (Next.js 16.3): не нужно пробрасывать `locale` через пропсы или вызывать `setRequestLocale` в каждой странице, при этом страницы остаются статическими.
+- **Тексты типизированы**: опечатка в ключе `t("...")` — ошибка TypeScript.
+- **Цвета — токены в `globals.css`**; фирменный оранжевый подобран так, чтобы белый текст на кнопках проходил WCAG AA (контраст 4.7:1).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## План
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [x] Этап 1. Основа: Next.js, Tailwind, shadcn/ui, RU/EN, шапка, футер, главная, CI
+- [ ] Этап 2. Туры: данные на двух языках, каталог с фильтрами, страница тура
+- [ ] Этап 3. Заявки: форма, валидация на сервере, письмо через Resend
+- [ ] Этап 4. База данных (Neon + Prisma) и админка
+- [ ] Этап 5. SEO, тесты, Lighthouse
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Фото — [Unsplash](https://unsplash.com). Агентство, контакты и цифры вымышлены.

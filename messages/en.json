@@ -1,0 +1,84 @@
+{
+  "Metadata": {
+    "title": "Joldosh — tours from Bishkek",
+    "description": "Beach holidays and sightseeing tours from Bishkek, last-minute deals and trips around Kyrgyzstan. We’ll match a tour to your budget and help with the visa."
+  },
+  "Nav": {
+    "tours": "Tours",
+    "destinations": "Destinations",
+    "about": "About us",
+    "contacts": "Contacts"
+  },
+  "Header": {
+    "home": "Joldosh — home page",
+    "navLabel": "Main menu",
+    "cta": "Find a tour",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "menu": "Site menu"
+  },
+  "LocaleSwitcher": {
+    "label": "Site language",
+    "ru": "Русский",
+    "en": "English"
+  },
+  "WhatsApp": {
+    "label": "Message us on WhatsApp",
+    "greeting": "Hello! I’d like help choosing a tour."
+  },
+  "Home": {
+    "hero": {
+      "eyebrow": "Travel agency in Bishkek",
+      "title": "Tours from Bishkek\u00a0— from <nowrap>Issyk-Kul</nowrap> to the Maldives",
+      "subtitle": "We’ll find a trip that fits your budget, help with the visa and stay in touch for the whole journey.",
+      "primaryCta": "Browse tours",
+      "secondaryCta": "Message on WhatsApp"
+    },
+    "stats": {
+      "title": "Joldosh in numbers",
+      "years": { "value": "8 years", "label": "helping people travel" },
+      "travelers": { "value": "12,000+", "label": "happy travellers" },
+      "destinations": { "value": "40+", "label": "destinations worldwide" },
+      "support": { "value": "24/7", "label": "support during your trip" }
+    },
+    "features": {
+      "title": "Why travel with us",
+      "subtitle": "Joldosh means “fellow traveller” in Kyrgyz. We’re with you at every step — from choosing a hotel to getting back home.",
+      "prices": {
+        "title": "Honest prices",
+        "text": "You see the final price up front — no hidden fees or surcharges."
+      },
+      "visa": {
+        "title": "Visas & paperwork",
+        "text": "We’ll help you gather the documents and submit them for you — all that’s left is packing."
+      },
+      "hotels": {
+        "title": "Hand-picked hotels",
+        "text": "We only book hotels that we or our travellers have stayed at."
+      },
+      "local": {
+        "title": "Kyrgyzstan insiders",
+        "text": "Issyk-Kul, Son-Kul and Karakol are our backyard — we’ll show you places no guidebook mentions."
+      }
+    },
+    "cta": {
+      "title": "Not sure where to go?",
+      "text": "Tell us what kind of holiday you have in mind — we’ll send you a few options within 15 minutes.",
+      "button": "Find a tour on WhatsApp"
+    }
+  },
+  "Footer": {
+    "about": "Joldosh means “fellow traveller” in Kyrgyz. We put together tours from Bishkek around the world and trips across Kyrgyzstan.",
+    "navigation": "Navigation",
+    "contacts": "Contacts",
+    "address": "Bishkek, Kyrgyzstan",
+    "hours": "Mon–Sat: 10:00–19:00",
+    "copyright": "© {year} Joldosh Travel",
+    "demo": "Demo portfolio project — not a real travel agency. Photos: Unsplash."
+  },
+  "NotFound": {
+    "title": "Page not found",
+    "text": "It may have moved or isn’t ready yet. Start from the home page — there’s plenty to explore.",
+    "back": "Back to home"
+  }
+}
