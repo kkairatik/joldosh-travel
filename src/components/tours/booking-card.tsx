@@ -1,7 +1,9 @@
 import { CalendarDays, Flame } from "lucide-react";
 import { useFormatter, useLocale, useTranslations } from "next-intl";
 
+import { BookingDialog } from "@/components/booking/booking-dialog";
 import { WhatsAppIcon } from "@/components/icons";
+import { useBookingTour } from "@/components/tours/use-booking-tour";
 import { Button } from "@/components/ui/button";
 import { whatsappHref } from "@/lib/contacts";
 import { discountPercent, upcomingDepartures } from "@/lib/tours/filters";
@@ -9,8 +11,7 @@ import type { Tour } from "@/lib/tours/schema";
 
 const VISIBLE_DATES = 6;
 
-// Цена, даты и кнопки. На этапе 3 «Забронировать» откроет форму заявки,
-// а пока ведёт в WhatsApp с готовым текстом
+// Цена, ближайшие даты, форма бронирования и вопрос в WhatsApp
 export function BookingCard({ tour }: { tour: Tour }) {
   const t = useTranslations("Tour");
   const format = useFormatter();
@@ -18,6 +19,7 @@ export function BookingCard({ tour }: { tour: Tour }) {
   const title = tour.title[locale];
   const dates = upcomingDepartures(tour);
   const discount = discountPercent(tour);
+  const bookingTour = useBookingTour(tour);
 
   return (
     <div className="rounded-3xl bg-background p-6 shadow-xl ring-1 shadow-black/5 ring-border">
@@ -74,15 +76,7 @@ export function BookingCard({ tour }: { tour: Tour }) {
       )}
 
       <div className="mt-6 grid gap-2">
-        <Button asChild size="xl">
-          <a
-            href={whatsappHref(t("bookingMessage", { title }))}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {t("book")}
-          </a>
-        </Button>
+        <BookingDialog tour={bookingTour} />
         <Button asChild size="xl" variant="outline">
           <a
             href={whatsappHref(t("questionMessage", { title }))}

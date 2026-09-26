@@ -164,9 +164,8 @@
     "noDepartures": "Ask our manager about dates",
     "book": "Book now",
     "ask": "Ask a question",
-    "bookingMessage": "Hello! I’d like to book the “{title}” tour.",
     "questionMessage": "Hello! I have a question about the “{title}” tour.",
-    "bookingNote": "We’ll reply on WhatsApp within 15 minutes and help you pick a date.",
+    "bookingNote": "We’ll reply within 15 minutes and help you pick a date.",
     "similar": "Similar tours"
   },
   "Destinations": {
@@ -175,6 +174,91 @@
     "metaDescription": "Holiday destinations from Bishkek: Turkey, the UAE, Egypt, Thailand, Vietnam, Georgia, the Maldives and Kyrgyzstan.",
     "tours": "{count, plural, one {# tour} other {# tours}}",
     "from": "from {price}"
+  },
+  "Booking": {
+    "tourTitle": "Book this tour",
+    "generalTitle": "Send a request",
+    "generalSubtitle": "Tell us what kind of holiday you’re after — we’ll send you a few options within 15 minutes.",
+    "date": "Departure date",
+    "dateOther": "Another date — I’ll discuss it with a manager",
+    "when": "When would you like to travel",
+    "whenPlaceholder": "For example, a week in November",
+    "destination": "Destination",
+    "destinationAny": "Not sure yet — suggest something",
+    "adults": "Adults",
+    "children": "Children",
+    "name": "Name",
+    "namePlaceholder": "What should we call you",
+    "phone": "Phone",
+    "phonePlaceholder": "+996 700 123 456",
+    "email": "Email",
+    "optional": "optional",
+    "contact": "How should we contact you",
+    "contactMethods": {
+      "whatsapp": "WhatsApp",
+      "call": "Phone call",
+      "telegram": "Telegram"
+    },
+    "comment": "Comment",
+    "commentPlaceholder": "Hotel preferences, budget, special requests",
+    "submit": "Send request",
+    "submitting": "Sending…",
+    "privacy": "By sending this form you agree that we’ll contact you using the details provided. We never share your data.",
+    "successTitle": "Request sent!",
+    "successText": "A manager will get back to you within 15 minutes during working hours: Mon–Sat, 10:00–19:00.",
+    "successWhatsApp": "Message on WhatsApp",
+    "close": "Close",
+    "again": "Send another request",
+    "errors": {
+      "check": "Please check the fields marked in red.",
+      "send": "We couldn’t send your request. Please try again or message us on WhatsApp.",
+      "nameShort": "Please enter your name — at least 2 letters",
+      "nameLong": "The name is too long",
+      "phone": "Please check the number: it should have 9 to 15 digits",
+      "email": "Please check the email address",
+      "commentLong": "The comment is too long — up to 1,000 characters",
+      "whenLong": "The answer is too long — up to 100 characters",
+      "date": "Please choose a date from the list",
+      "invalid": "Please check this field"
+    }
+  },
+  "Contacts": {
+    "title": "Contacts",
+    "description": "Message us, call us or send a request — we’ll find a tour and answer any questions about your trip.",
+    "metaDescription": "Contacts of the Joldosh travel agency in Bishkek: phone, WhatsApp, email and a tour request form.",
+    "phone": "Phone",
+    "whatsapp": "WhatsApp",
+    "whatsappText": "We reply within 15 minutes",
+    "email": "Email",
+    "office": "Office",
+    "map": "Map of central Bishkek"
+  },
+  "About": {
+    "title": "About us",
+    "description": "Joldosh means “fellow traveller” in Kyrgyz. We plan trips the way we would plan them for our friends.",
+    "metaDescription": "The Joldosh travel agency from Bishkek: how we choose tours, help with visas and stay in touch during your trip.",
+    "storyTitle": "A travel companion, not a ticket seller",
+    "story1": "We started with trips around Kyrgyzstan, taking friends to Son-Kul and Karakol, and then began helping them with holidays abroad. That’s how an agency was born that sells not “packages” but holidays you want to come back from with stories.",
+    "story2": "We don’t keep hundreds of hotels in our catalogue. Instead, we know every one we offer and tell you honestly who it suits and who it doesn’t.",
+    "stepsTitle": "How we work",
+    "steps": {
+      "request": {
+        "title": "Request",
+        "text": "Message us on WhatsApp or send a request on the website — a couple of sentences about your ideal holiday is enough."
+      },
+      "options": {
+        "title": "Options",
+        "text": "Within 15 minutes we send two or three options with final prices — no hidden fees."
+      },
+      "booking": {
+        "title": "Booking",
+        "text": "We book the tour, help with the visa and insurance, and send the documents to your messenger."
+      },
+      "support": {
+        "title": "Support",
+        "text": "During the trip we’re available 24/7: if anything goes wrong, we’ll sort it out for you."
+      }
+    }
   },
   "Footer": {
     "about": "Joldosh means “fellow traveller” in Kyrgyz. We put together tours from Bishkek around the world and trips across Kyrgyzstan.",
