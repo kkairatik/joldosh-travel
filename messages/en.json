@@ -26,20 +26,34 @@
     "label": "Message us on WhatsApp",
     "greeting": "Hello! I’d like help choosing a tour."
   },
+  "Breadcrumbs": {
+    "label": "You are here",
+    "home": "Home"
+  },
   "Home": {
     "hero": {
       "eyebrow": "Travel agency in Bishkek",
       "title": "Tours from Bishkek\u00a0— from <nowrap>Issyk-Kul</nowrap> to the Maldives",
-      "subtitle": "We’ll find a trip that fits your budget, help with the visa and stay in touch for the whole journey.",
-      "primaryCta": "Browse tours",
-      "secondaryCta": "Message on WhatsApp"
+      "subtitle": "We’ll find a trip that fits your budget, help with the visa and stay in touch for the whole journey."
     },
     "stats": {
       "title": "Joldosh in numbers",
-      "years": { "value": "8 years", "label": "helping people travel" },
-      "travelers": { "value": "12,000+", "label": "happy travellers" },
-      "destinations": { "value": "40+", "label": "destinations worldwide" },
-      "support": { "value": "24/7", "label": "support during your trip" }
+      "years": {
+        "value": "8 years",
+        "label": "helping people travel"
+      },
+      "travelers": {
+        "value": "12,000+",
+        "label": "happy travellers"
+      },
+      "destinations": {
+        "value": "40+",
+        "label": "destinations worldwide"
+      },
+      "support": {
+        "value": "24/7",
+        "label": "support during your trip"
+      }
     },
     "features": {
       "title": "Why travel with us",
@@ -65,7 +79,102 @@
       "title": "Not sure where to go?",
       "text": "Tell us what kind of holiday you have in mind — we’ll send you a few options within 15 minutes.",
       "button": "Find a tour on WhatsApp"
+    },
+    "search": {
+      "label": "Find a tour",
+      "submit": "Find tours",
+      "help": "Not sure what to choose?",
+      "helpLink": "Message us on WhatsApp and we’ll pick for you"
+    },
+    "hot": {
+      "title": "Last-minute deals",
+      "subtitle": "Discounts on upcoming departures — these seats go fast.",
+      "all": "All last-minute deals"
+    },
+    "destinations": {
+      "title": "Popular destinations",
+      "subtitle": "From Red Sea beaches to yurts on the shore of Son-Kul.",
+      "all": "All destinations"
     }
+  },
+  "Filters": {
+    "toggle": "Filters",
+    "destination": "Destination",
+    "anyDestination": "All destinations",
+    "type": "Holiday type",
+    "anyType": "Any",
+    "budget": "Budget",
+    "anyBudget": "Any",
+    "budgetUpTo": "up to {price}",
+    "duration": "Duration",
+    "anyDuration": "Any",
+    "durations": {
+      "short": "up to 4 nights",
+      "week": "5–8 nights",
+      "long": "9 nights or more"
+    },
+    "sort": "Sort by",
+    "sorts": {
+      "popular": "Most popular",
+      "price-asc": "Price: low to high",
+      "price-desc": "Price: high to low"
+    },
+    "hot": "Last-minute deals only",
+    "reset": "Reset filters",
+    "apply": "Show"
+  },
+  "TourTypes": {
+    "beach": "Beach holidays",
+    "sightseeing": "Sightseeing",
+    "mountains": "Mountains & nature",
+    "ski": "Ski trips"
+  },
+  "Catalog": {
+    "title": "Tours from Bishkek",
+    "description": "Beach holidays, sightseeing tours and trips around Kyrgyzstan. Prices are per person.",
+    "metaDescription": "Tours from Bishkek to Turkey, the UAE, Egypt, Thailand, Vietnam, Georgia, the Maldives and around Kyrgyzstan: prices per person, departure dates and day-by-day itineraries.",
+    "found": "{count, plural, one {# tour found} other {# tours found}}",
+    "emptyTitle": "No tours match these filters yet",
+    "emptyText": "Try loosening the filters or message us — we’ll find an option that fits.",
+    "emptyReset": "Show all tours"
+  },
+  "Tour": {
+    "priceFrom": "from {price}",
+    "perPerson": "per person",
+    "nights": "{count, plural, one {# night} other {# nights}}",
+    "duration": "{days, plural, one {# day} other {# days}}, {nights, plural, one {# night} other {# nights}}",
+    "hot": "Hot deal",
+    "discount": "−{percent}%",
+    "oldPrice": "old price",
+    "more": "View tour",
+    "gallery": "Tour photos",
+    "openPhoto": "Open photo {index} of {total}",
+    "photo": "Photo {index} of {total}",
+    "prev": "Previous photo",
+    "next": "Next photo",
+    "close": "Close",
+    "about": "About the tour",
+    "itinerary": "Day-by-day itinerary",
+    "day": "Day {day}",
+    "days": "Days {from}–{to}",
+    "included": "What’s included",
+    "excluded": "Not included",
+    "departures": "Upcoming dates",
+    "moreDates": "and {count, plural, one {# more date} other {# more dates}}",
+    "noDepartures": "Ask our manager about dates",
+    "book": "Book now",
+    "ask": "Ask a question",
+    "bookingMessage": "Hello! I’d like to book the “{title}” tour.",
+    "questionMessage": "Hello! I have a question about the “{title}” tour.",
+    "bookingNote": "We’ll reply on WhatsApp within 15 minutes and help you pick a date.",
+    "similar": "Similar tours"
+  },
+  "Destinations": {
+    "title": "Where to go from Bishkek",
+    "description": "Eight destinations for every season and budget — from warm seas to mountain lakes.",
+    "metaDescription": "Holiday destinations from Bishkek: Turkey, the UAE, Egypt, Thailand, Vietnam, Georgia, the Maldives and Kyrgyzstan.",
+    "tours": "{count, plural, one {# tour} other {# tours}}",
+    "from": "from {price}"
   },
   "Footer": {
     "about": "Joldosh means “fellow traveller” in Kyrgyz. We put together tours from Bishkek around the world and trips across Kyrgyzstan.",

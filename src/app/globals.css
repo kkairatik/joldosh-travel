@@ -111,3 +111,14 @@
     text-wrap: balance;
   }
 }
+
+/* На странице тура внизу экрана есть панель бронирования (только на телефоне):
+   поднимаем над ней кнопку WhatsApp и оставляем место под панель в конце страницы */
+@media (width < 64rem) {
+  body:has([data-mobile-booking-bar]) {
+    padding-bottom: 5rem;
+  }
+  body:has([data-mobile-booking-bar]) [data-whatsapp-fab] {
+    bottom: 5.75rem;
+  }
+}
